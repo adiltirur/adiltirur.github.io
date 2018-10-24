@@ -20,7 +20,7 @@
 
 // import { drawKeypoints, drawSkeleton } from './demo_util';
 const maxVideoSize = 513;
-const canvasSize = 600;
+const canvasSize = 400;
 const stats = new Stats();
 
 function isAndroid() {
