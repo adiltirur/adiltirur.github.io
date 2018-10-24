@@ -75,15 +75,15 @@ async function loadVideo() {
 }
 
 const guiState = {
-  algorithm: 'multi-pose',
+  algorithm: 'single-pose',
   input: {
     mobileNetArchitecture:'1.01', //mobileNetArchitecture: isMobile() ? '0.50' : '1.01',
-    outputStride: 16,
-    imageScaleFactor: 0.4,
+    outputStride: 32,
+    imageScaleFactor: 0.3,
   },
   singlePoseDetection: {
     minPoseConfidence: 0.1,
-    minPartConfidence: 0.5,
+    minPartConfidence: 0.3,
   },
   multiPoseDetection: {
     maxPoseDetections: 2,
