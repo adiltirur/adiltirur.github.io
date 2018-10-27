@@ -75,7 +75,7 @@ async function loadVideo() {
 }
 
 const guiState = {
-  algorithm: 'single-pose',
+  algorithm: 'multi-pose',
   input: {
     mobileNetArchitecture:'1.01', //mobileNetArchitecture: isMobile() ? '0.50' : '1.01',
     outputStride: 32,

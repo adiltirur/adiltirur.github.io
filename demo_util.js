@@ -54,7 +54,9 @@ function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
 /**
  * Draw pose keypoints onto a canvas
  */
-function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {
+function drawKeypoints(keypoints1, minConfidence, ctx, scale = 1) {
+  keypoints=keypoints1.splice(5, 16) ;
+  console.log(keypoints);
   for (let i = 0; i < keypoints.length; i++) {
     const keypoint = keypoints[i];
 
