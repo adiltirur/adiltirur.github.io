@@ -1,8 +1,5 @@
 steps:
-# Push it to GCR.
-- name: gcr.io/cloud-builders/docker
-  args: ['push', 'gcr.io/teamseven/app']
-# Deploy your Flex app from the image in GCR.
+
 - name: gcr.io/cloud-builders/gcloud
   args: ['app', 'deploy', 'app.yaml', '--image-url=gcr.io/teamseven/app']
 # Note that this build pushes this image.
