@@ -1,7 +1,4 @@
 steps:
-# Build the Docker image.
-- name: gcr.io/cloud-builders/docker
-  args: ['build', '-t', 'gcr.io/teamseven/app', '.']
 # Push it to GCR.
 - name: gcr.io/cloud-builders/docker
   args: ['push', 'gcr.io/teamseven/app']
