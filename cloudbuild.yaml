@@ -2,5 +2,3 @@ steps:
 
 - name: gcr.io/cloud-builders/gcloud
   args: ['app', 'deploy', 'app.yaml', '--image-url=gcr.io/teamseven/app']
-# Note that this build pushes this image.
-images: ['gcr.io/teamseven/app']
