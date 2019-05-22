@@ -21,6 +21,15 @@
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 
+  <!--Github Activity log -->
+  <!----------------------------------------------------------------------------------------------------------------->
+  <!-- github calendar css -->
+  <link rel="stylesheet" href="plugins/github-calendar/dist/github-calendar.css">
+  <!-- github acitivity css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+  <link rel="stylesheet" href="plugins/github-activity/github-activity-0.1.5.min.css">
+
+
 </head>
 
 <body id="page-top">
@@ -47,18 +56,15 @@
   </nav>
 
   <!-- Header -->
-  <header class="masthead lg-1">
+  <header class="masthead d-flex">
     <div class="container text-center my-auto">
       <h1 class="mb-1">Team7</h1>
       <h3 class="mb-5">
         <em>Digital Product School, Munich</em>
       </h3>
-      
-      </div>
-        <div class="container text-center mt-4">
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-        </div>
-      <div class="overlay"></div>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+    </div>
+    <div class="overlay"></div>
   </header>
 
   <!-- About -->
@@ -161,6 +167,27 @@
   <!-- Grid row -->
 
 </section>
+
+<!-- Github Activity log (To be verified)-->
+<section class="github section">
+    <div class="section-inner">
+        <h2 class="heading">Github Activities</h2>
+
+
+        <div id="github-graph" class="github-graph">
+
+        </div><!--//github-graph-->
+
+
+
+        <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->
+        <div id="feed" class="feed">
+
+        </div><!--//ghfeed-->
+
+
+    </div><!--//secton-inner-->
+</section><!--//section-->
 <!-- Section: Team v.1 -->
 <footer class="footer text-center">
   <div class="container">
@@ -203,6 +230,22 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
+  <script type="text/javascript" src="plugins/github-calendar/dist/github-calendar.min.js"></script>
+<!-- github activity plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+<script type="text/javascript" src="plugins/github-activity/github-activity-0.1.5.min.js"></script>
+<script>
+  GitHubActivity.feed({
+      username: "DigitalProductschool",
+      //repository: "your-repo", // optional
+      selector: "#feed",
+      limit: 5 // optional
+  });
+</script>
+<script>
+
+    new GitHubCalendar(".github-graph", "DigitalProductschool", {responsive:true});
+</script>
 
 </body>
 
