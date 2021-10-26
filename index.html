@@ -23,20 +23,14 @@
 
   </head>
   <body>
-      <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
-      <br/><br/>
-      <input type="button" value="Show Version" onClick="showVersion('called within the html')" />
+      <input type="button" value="Download Test" onClick="showAndroidToast('barmer', 'testURL')" />
       <br/><br/>
       <p id="version"></p>
       <script type="text/javascript">
-    
-        function showAndroidToast(toast) {
-            Barmer.showToast(toast);
+     function mobileDownload(fileName, url) {
+            Barmer.download(fileName, url);
         }
-        function showVersion(msg) {
-            var myVar = Barmer.getAndroidVersion();
-            document.getElementById("version").innerHTML = msg + " You are running API Version " + myVar;
-        }
+
       </script>
   </body>
 </html>
