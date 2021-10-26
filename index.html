@@ -23,12 +23,15 @@
 
   </head>
   <body>
-      <input type="button" value="Download Test1" onClick="mobileDownload('barmer', 'testURL')" />
+      <input type="button" value="Download Test2" onClick="mobileDownload('barmer', 'testURL')" />
       <br/><br/>
       <p id="version"></p>
       <script type="text/javascript">
      function mobileDownload(fileName, url) {
+			console.log(fileName);
+			console.log(url);
 		 	console.log(Barmer);
+	
             Barmer.download(fileName, url);
         }
 
