@@ -31,10 +31,10 @@
       <script type="text/javascript">
     
         function showAndroidToast(toast) {
-            AndroidInterface.showToast(toast);
+            Barmer.showToast(toast);
         }
         function showVersion(msg) {
-            var myVar = AndroidInterface.getAndroidVersion();
+            var myVar = Barmer.getAndroidVersion();
             document.getElementById("version").innerHTML = msg + " You are running API Version " + myVar;
         }
       </script>
